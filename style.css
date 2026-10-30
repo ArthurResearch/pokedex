@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #202020, #383838);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    padding: 30px 15px;
+}
+
+.pokedex {
+    width: 100%;
+    max-width: 450px;
+    background: #d62828;
+    padding: 25px;
+    border-radius: 20px;
+    border: 5px solid #8b0000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.pokedex img {
+    width: 180px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+#busca {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+}
+
+#nome {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 2px solid #222;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+#nome:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 5px #ffcc00;
+}
+
+button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #ffcc00;
+    color: #222;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 0 #b38f00;
+}
+
+button:hover {
+    background: #ffe066;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #b38f00;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #b38f00;
+}
+
+#ant,
+#prox,
+#aleatorio {
+    width: 100%;
+}
+
+.conteinerCarta {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.carta {
+    width: 100%;
+    min-height: 500px;
+    background: linear-gradient(145deg, #ffffff, #e8e8e8);
+    border: 5px solid #ffcc00;
+    border-radius: 20px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+#nomePokemon {
+    font-size: 27px;
+    font-weight: bold;
+    color: #222;
+    text-transform: capitalize;
+}
+
+#idPokemon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-weight: bold;
+    color: #777;
+    font-size: 16px;
+}
+
+#card {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    background: radial-gradient(circle, #d9f3ff, #b5dce9);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#card:hover {
+    transform: scale(1.08);
+}
+
+.campoTipo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.campoTipo span {
+    background: #d62828;
+    color: white;
+    padding: 7px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+
+.campoFisico {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: #dedede;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.linha1,
+.linha2 {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.linha1 span {
+    font-size: 17px;
+    font-weight: bold;
+    color: #222;
+}
+
+.linha2 span {
+    font-size: 12px;
+    color: #666;
+}
+
+.campoStats {
+    width: 100%;
+}
+
+.campoStats ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.campoStats li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campoStats li span {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+}
+
+.percentConteiner {
+    width: 100%;
+    height: 12px;
+    background: #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.percent {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #d62828, #ffcc00);
+    border-radius: 20px;
+    transition: width 0.6s ease;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 12px;
+        gap: 25px;
+    }
+
+    .pokedex {
+        padding: 18px;
+    }
+
+    .pokedex img {
+        width: 150px;
+    }
+
+    .carta {
+        padding: 18px;
+    }
+
+    #card {
+        width: 150px;
+        height: 150px;
+    }
+
+    #nomePokemon {
+        font-size: 23px;
+    }
+
+    button {
+        font-size: 13px;
+    }
+}
